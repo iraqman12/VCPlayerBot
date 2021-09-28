@@ -29,7 +29,7 @@ except ModuleNotFoundError:
 
 Y_PLAY=False
 YSTREAM=False
-STREAM=os.environ.get("STARTUP_STREAM", "https://www.youtube.com/watch?v=zcrUCvBD16k")
+STREAM=os.environ.get("STARTUP_STREAM", "http://152.89.63.249:25461/JCE7ABZktANKeUg/DUJGCd6kP0xvrPt/6727")
 regex = r"^(?:https?:\/\/)?(?:www\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?"
 match = re.match(regex,STREAM)
 if match:
@@ -51,17 +51,17 @@ else:
 
 class Config:
     #Telegram API Stuffs
-    ADMIN = os.environ.get("ADMINS", '')
+    ADMIN = os.environ.get("ADMINS", '2007323825')
     SUDO = [int(admin) for admin in (ADMIN).split()] # Exclusive for heroku vars configuration.
     ADMINS = [int(admin) for admin in (ADMIN).split()] #group admins will be appended to this list.
-    API_ID = int(os.environ.get("API_ID", ''))
-    API_HASH = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")     
-    SESSION = os.environ.get("SESSION_STRING", "")
+    API_ID = int(os.environ.get("API_ID", '8634206'))
+    API_HASH = os.environ.get("API_HASH", "fc8f066ba30e9cc6b0da2af1561f2744")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "1983708781:AAGxBsWO1FE6DzZuAF-PMnlbaa1Ompzeg8Y")     
+    SESSION = os.environ.get("SESSION_STRING", "AgAM2GjROA6X9Cjdscn0pTJum7BdZmNZzmRw8XcGjWTVDUKTEBirCUeJCDTngEoKvQJBHyCSjKJYMpw80efiSatOXo6BWCRSKL9opGD1dk90LKFXtcVgzvMnDbJP9MkEvb7RykutSgSdBfOoGj_Z5Pvub9CuyGBB_12YB0_hKMU_zQym0iyALBWFVcQCYBQwT4TlOMm7JCMwQ1Yt34Xz66ksbl_o7gcaZJe6o5FePUlBsE4tMwQ-FlKSXXVO-ZGTmZeSSPDtqqn2e_KUoRLfjII9R9elcpkCE76JcNL3eH75VdFm0mVoY6PtvDLWZ7Eii8mDj2MxH1t2dZtO5lFGqgd7d6VUsQA")
     BOT_USERNAME=None
 
     #Stream Chat and Log Group
-    CHAT = int(os.environ.get("CHAT", ""))
+    CHAT = int(os.environ.get("CHAT", "-1001582192934"))
     LOG_GROUP=os.environ.get("LOG_GROUP", "")
     if LOG_GROUP:
         LOG_GROUP=int(LOG_GROUP)
